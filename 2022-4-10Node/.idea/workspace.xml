@@ -79,19 +79,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="aseng2.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="2022-4-10Node" />
       <extension name="coverage">
@@ -160,6 +147,7 @@
       <updated>1649566206522</updated>
       <workItem from="1649566208049" duration="2716000" />
       <workItem from="1649573297224" duration="9050000" />
+      <workItem from="1649661074821" duration="47000" />
     </task>
     <servers />
   </component>

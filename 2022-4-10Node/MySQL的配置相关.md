@@ -39,7 +39,7 @@
 
    ![image-20220410203838132](C:\Users\86182\AppData\Roaming\Typora\typora-user-images\image-20220410203838132.png)
 
-### 数据库的操作
+# 数据库的操作
 
 1. 
 
@@ -205,7 +205,7 @@
 
       ​	多个任意字符%
 
-# MySQL的查询
+## MySQL的查询
 
 1. 排序
 
@@ -265,7 +265,7 @@
 
    公式：：开始的索引=（当前页码-1)*每页显示条数
 
-# MySQL的约束
+## MySQL的约束
 
 ​	概念:对表中的数据进行限定，保证数据的准确性，有效性和完整性
 
@@ -307,7 +307,7 @@
 
    
 
-3.  主键约束：primary key
+3. 主键约束：primary key
 
    1. 注意
 
@@ -320,6 +320,16 @@
    2. 删除主键 （和其他不一样）
 
       alter table stu drop primary key;
+      
+   3. 联合主键
+
+      create table tab(rid int ,
+
+      ​		uid int.
+
+      ​		primary key (rid,uid)//他们两个不能同时相同
+
+      )
 
 4. 自动增长(一般和主键一起使用)
 
@@ -331,11 +341,73 @@
 
       )
 
-5. 
+5. 外键:foreign key ,让表与表产生关系，从而保证数据的正确性。
 
-6. 
+   1. create table employee(
 
-7. 
+      ​	id int primary key auto_increment,
 
-   
+      ​	dep_id int,
+
+      ​	constraint emp_dept_fk(名字) foreign key (dep_id)(本表的外键) references department(id) (其他表的其他字段)
+
+      );
+
+   2. 删除外键
+
+      alter table 表名 drop foreign key 外键名称;
+
+   3. 创建表后添加外键
+
+      alter table 表名 add constraint 外键名称 foreign key (外键字段名称) deferences 主表名称 (主表列名称);
+
+   4. 级联更新 级联删除
+
+      on update cascade on delete cascade;
+
+      语法 alter table 表名 add constraint 外键名称 foreign key (外键字段名称) references 主表名称(主表列名称) on update cascade on delete cascade;
+
+   5. 简写
+
+      foreign key (cid) references tab_category(cid)	(constraint 外键名称 可以不用写 系统会默认非配一个唯一的)
+
+   ## MySQL的范式
+
+   1. 第一范式：每一列都是不可分割的原子数据项
+
+   2. 第二范式：在第一范式的基础上，非码属性必须完全依赖于码（在第一范式基础上消除非主属性对主码的部分函数依赖）
+
+      1. 函数依赖：A-->B，如果通过A属性（属性组）的值，可以唯一确定B属性的值，则称B依赖于A
+
+         *列如：学号-》姓名，（学号，课程名称）-》分数
+
+      2. 完全函数依赖：A-->B，如果A是一个属性组，则B属性值的确定需要依赖于A属性组中所有的属性值。
+
+         *列如：（学号，课程）--》分数
+
+      3. 部分函数依赖A--》B，如果A是一个属性组，则B属性值的确定只需要依赖于A属性组中某一些值即可
+
+         *列如：（学号，课程名称）--》姓名
+
+      4. 传递函数依赖：A-->B，B-->C，如果通过A属性（属性组）的值，可以确定唯一B属性的值，再通过B属性（属性组）的值可以唯一确定C属性的值，则称C传递函数依赖于A
+
+         *列如：学号--》系名，系名--》系主任
+
+      5. 码：如果在一张表中，一个属性或属性组，被其他所有属性所完全依赖，则称这个属性（属性组）为改表的码
+
+         *列如：该表中的码为：（学号，课程名称）
+
+         *主属性：码属性组中的所有属性
+
+         *非主属性：除过码属性组的属性
+
+   3. 第三范式：在第二范式基础上，任何非主属性不以依赖于其他非主属性（在第二范式基础上消除传递依赖）
+
+## 数据库的备份和还原
+
+1. 命令行：
+
+   备份:mysqldump -u用户名 -p密码 >保存路径
+
+   还原：source 文件路径
 
