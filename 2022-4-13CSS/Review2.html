@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<title>99乘法表</title>
+<script>
+    document.write("<table align='center' border='1px'>");
+    for( var i=1;i<=9;i++){
+        document.write("<tr>");
+        for(var j=1;j<=i;j++){
+            document.write("<td>");
+            document.write(i+"*"+j+"="+(i*j)+"&nbsp;&nbsp;&nbsp;");
+            document.write("</td>");
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+
+    function fun2(a,b){
+        alert(a+b);
+    }
+    fun2(2,3);
+
+    var date=new Date();
+    document.write(date="<br>");
+    document.write(date.toLocaleString()+"<br>");
+    document.write(date.getTime()+"<br>");
+</script>
+
+
+    <style>
+        div{
+            color: pink;
+        }
+        #uuu{
+            color: blue;
+        }
+        .kkk{
+            color: yellow;
+        }
+    </style>
+
+<body>
+    <div style="color:red;">hello css</div>
+    <div>这里是div</div>
+    <div id="uuu">这里是id=uuu</div>
+    <div class="kkk">这里是class=kkkk</div>
+</body>
+</html>

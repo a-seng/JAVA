@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  document.write(Math.PI+"<br>");
+  document.write(Math.random()+"<br>");
+  document.write(Math.round(3.14)+"<br>");
+  document.write(Math.ceil(3.14)+"<br>");
+
+  var reg=new RegExp("\w{6,12}");
+  var reg2=/^\w{6,12}$/;
+
+  var username="zhangsan";
+
+  var flag=reg2.test(username);
+  alert(flag);
+
+  var str="传智播客";
+  var encode=encodeURI(str);
+  document.write(encode+"<br>");
+  var s=decodeURI(encode);
+  document.write(s+"<br>");
+
+</script>
+
+</body>
+</html>
