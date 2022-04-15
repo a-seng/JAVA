@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  document.write((123===123)+"<br>");
+  document.write(("123"===123)+"<br>");
+  // function fun(){
+  //   b=4;
+  //   alert(b);
+  // }
+  // fun();
+  // var fun2=fun;
+  // fun2();
+  var funsss=function (){
+    var sum=0;
+    for(var i=0;i<arguments.length;i++){
+      sum+=arguments[i];
+    }
+    alert(sum);
+  }
+  // funsss(1,2,3,4,5,6,7);
+  var arr=[1,2,3];
+  arr[10]=10;
+  document.write(arr.join("0")+  "<br>");
+  // for(var i=0;i<arr.length;i++){
+  //   document.write(arr[i]);
+  // }
+
+  var number =Math.floor((Math.random()*100))+1;
+  document.write(number);
+
+
+
+</script>
+
+</body>
+</html>
