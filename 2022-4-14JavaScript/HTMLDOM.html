@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTMLDOM</title>
+</head>
+<body>
+<div id="div1">
+  div
+</div>
+
+<script>
+  var div=document.getElementById("div1");
+  var innerHtml=div.innerHTML;
+  div.innerHTML="<p>aaa</p>";
+
+</script>
+
+</body>
+</html>

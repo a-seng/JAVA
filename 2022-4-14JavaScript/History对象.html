@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>History对象</title>
+</head>
+
+<input type="button" id="btn" value="获取历史记录个数">
+<a href="002.html">002页面</a>
+<input type="button" id="forword" value="前进">
+<body>
+<script>
+  var btn=document.getElementById("btn");
+
+  btn.onclick=function (){
+      var length = history.length;
+      alert(length);
+  }
+
+  var forword=document.getElementById("forword");
+  forword.onclick=function (){
+      history.go(1);
+  }
+</script>
+
+
+</body>
+</html>

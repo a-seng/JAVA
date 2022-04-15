@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+</head>
+<body>
+<!--<img id="light" src="img/off.gif" onclick="alert('我被点了');">-->
+<img id="aaa" src="img/off.gif" onclick="fun();">
+
+<img id="bbb" src="img/off.gif">
+<img id="img" src="img/banner_1.jpg" width="100%">
+<input type="button" id="btn" value="刷新">
+<input type="button" id="goBaidu" value="去百度">
+</body>
+<script>
+
+    var btn = document.getElementById("btn");
+
+    btn.onclick=function (){
+        location.reload();
+    }
+    var goBaidu=document.getElementById("goBaidu");
+
+    goBaidu.onclick=function (){
+        location.href="https://www.baidu.com/";
+    }
+
+
+    // function fun(){
+    //     alert("我被点了");
+    //     alert("我又被点了");
+    // }
+    //
+    // function fun2(){
+    //     alert("咋老点我？");
+    // }
+    //
+    // var light2 = document.getElementById("light2");
+    //
+    // light2.onclick=fun2;
+
+    // setTimeout("fun3();",2000);
+    //
+    // function fun3(){
+    //     alert("boom~~~");
+    // }
+    //
+    // var number =1;
+    // function  fun4(){
+    //     number++;
+    //     if(number>3){
+    //         number=1;
+    //     }
+    //     var img=document.getElementById("img");
+    //     img.src="img/banner_"+number+".jpg";
+    //
+    // }
+
+
+
+</script>
+
+</html>
