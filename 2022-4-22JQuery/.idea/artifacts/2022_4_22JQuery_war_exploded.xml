@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="2022-4-22JQuery:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/2022_4_22JQuery_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="2022-4-22JQuery" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="2022-4-22JQuery/web/Web" />
+    </root>
+  </artifact>
+</component>
