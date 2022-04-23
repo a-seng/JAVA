@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抽奖</title>
+  <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+  <script language="JavaScript">
+
+      var imgs=["../img/man00.jpg",
+                "../img/man01.jpg",
+                "../img/man02.jpg",
+                "../img/man03.jpg",
+                "../img/man04.jpg",
+                "../img/man05.jpg",
+                "../img/man06.jpg",
+            ];
+      var startId;
+      var index;
+
+      $(function (){
+        //给开始按钮绑定单击事件
+        $("#startId").prop("disabled",false);
+        $("#stopId").prop("disabled",true);
+
+        $("#startId").click(function (){
+          startId=setInterval(function (){
+            //处理按钮是否可以使用的效果
+            $("#startId").prop("disabled",true);
+            $("#stopId").prop("disabled",false);
+
+            index=Math.floor(Math.random()*7);
+            $("#img1Id").prop("src",imgs[index]);
+          },20);
+        });
+
+        $("#stopId").click(function (){
+          $("#startId").prop("disabled",false);
+          $("#stopId").prop("disabled",true);
+
+          clearInterval(startId);
+          $("#img2Id").prop("src",imgs[index]).hide();
+          $("#img2Id").show(1000);
+        });
+
+      });
+
+
+    </script>
+</head>
+<body>
+
+<div style="border-style: dotted;width: 160px;height: 100px">
+  <img id="img1Id" src="../img/man00.jpg" style="width: 160px;height:100px "/>
+</div>
+
+<div
+  style="border-style: double;width: 800px;height: 500px;position:absolute;left: 500px;top: 10px  ">
+  <img id="img2Id" src="../img/man00.jpg" width="800px" height="500px"/>
+</div>
+<input
+  id="startId"
+  type="button"
+  value="点击开始"
+  style="width: 150px;height: 150px;font-size: 22px"
+>
+
+<input
+  id="stopId"
+  type="button"
+  value="点击停止"
+  style="width: 150px;height: 150px;font-size: 22px"
+>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绑定事件</title>
+  <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="UTF-8"></script>
+
+  <script type="text/javascript">
+    $(function (){
+      $("#btn").on("click",function (){
+        alert("我被点击了");
+      });
+
+      $("#btn2").click(function (){
+        $("#btn").off();
+      })
+    })
+
+  </script>
+</head>
+<body>
+<input id="btn" type="button" value="使用on绑定点击事件">
+<input id="btn2" type="button" value="使用off解绑单击事件">
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历</title>
+  <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      /*
+      遍历
+        js的遍历方式
+          for(初始值；循环条件；步长)
+        jq的遍历方式
+          jq对象.each(callback)
+          $.each(object,[callback]
+          for...of;jquery 3.0版本后提供的方式
+       */
+
+      $(function (){
+        //获取所有ul下的li
+        var cities=$("#city li");
+        // for(var i =0;i<cities.length;i++){
+        //   if("上海"==cities[i].innerHTML){
+        //     alert("这里有一个被跳过了");
+        //     continue;
+        //   }
+        //   alert(i+":"+cities[i].innerHTML);
+
+        // }
+
+        //jq对象.each(callback)
+        // cities.each(function (index,element){
+        //   //获取li对象，第一种方式this
+        //   // alert(this.innerHTML);
+        //   // alert($(this).html());
+        //   //获取li对象 第二种方式，在回调函数中定义参数 index
+        //   // alert(index+":"+element.innerHTML);
+        //
+        //   // alert(index+":"+$(element).html());
+        //
+        //   if("上海"==$(element).html()){
+        //
+        //     return true;
+        //   }
+        //   alert(index+":"+$(element).html());
+        //
+        //
+        // })
+
+        //3$.each(object,[callback])
+        // $.each(cities,function (){
+        //   alert($(this).html());
+        // });
+
+        //4 for...of:jquery3.0版本后
+        for(li of cities){
+          alert($(li).html());
+        }
+
+
+
+      })
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+
+
+<ul id="city">
+  <li>北京</li>
+  <li>上海</li>
+  <li>天津</li>
+  <li>重庆</li>
+</ul>
+</body>
+</html>
