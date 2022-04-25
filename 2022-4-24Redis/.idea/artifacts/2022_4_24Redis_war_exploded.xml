@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="2022-4-24Redis:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/2022_4_24Redis_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="2022-4-24Redis" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="2022-4-24Redis/web/Web" />
+    </root>
+  </artifact>
+</component>
